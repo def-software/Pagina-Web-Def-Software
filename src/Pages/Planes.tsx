@@ -1,25 +1,28 @@
-﻿import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const PricingPlans = [
   {
-    name: 'Startup',
-    price: '$49',
-    desc: 'Perfecto para pequeños comercios y negocios emergentes.',
-    features: ['Hasta 5 sucursales', 'Módulo de facturación', 'Stock básico', 'Cierres de caja fijos', 'Soporte general'],
-    popular: false,
-  },
-  {
-    name: 'Profesional',
-    price: '$129',
-    desc: 'Para empresas en crecimiento que necesitan control total.',
-    features: ['Sucursales ilimitadas', 'Facturación automática', 'Stock multicabezal', 'Permisos de usuarios', 'Soporte prioritario 24/7'],
+    name: 'Licencia Base MeatManager',
+    price: '$50',
+    unit: '/ sucursal',
+    desc: 'Habilita MeatManager Web por sucursal y gestión de usuarios con permisos granulados.',
+    features: ['Gestión de Clientes', 'Facturación & Comprobantes', 'Control de Stock', 'Cierres de Caja', 'Dashboard de Ventas'],
     popular: true,
   },
   {
-    name: 'Enterprise',
-    price: 'Custom',
-    desc: 'Soluciones a medida para franquicias corporativas.',
-    features: ['Despliegue On-Premise', 'Kioscos interactivos API', 'SLA 99.99% garantizado', 'Integraciones bancarias', 'Capacitación in situ'],
+    name: 'Módulo Logística & Envíos',
+    price: '$25',
+    unit: '/ repartidor',
+    desc: 'Ideal para optimizar entregas. Incluye acceso a la App Móvil para el repartidor.',
+    features: ['Hoja de Ruta Digital', 'Estado de Entregas en Tiempo Real', 'App Móvil de Repartos', 'Mapeo de Rutas', 'Control de Entregas'],
+    popular: false,
+  },
+  {
+    name: 'App Gerencial Móvil',
+    price: '$30',
+    unit: '/ cliente',
+    desc: 'Acceso total a indicadores y cajas en tiempo real desde cualquier lugar.',
+    features: ['Cajas en Tiempo Real', 'KPIs & Indicadores', 'Ubicación de Repartidores', 'Notificaciones Push', 'Acceso para Administradores'],
     popular: false,
   },
 ];
@@ -41,7 +44,7 @@ export default function Planes() {
           {PricingPlans.map((plan, index) => (
             <div key={plan.name} className={`pricing-card glass-panel reveal ${plan.popular ? 'popular' : ''}`} style={{ transitionDelay: `${index * 0.15}s` }}>
               <div className="pricing-tier">{plan.name}</div>
-              <div className="pricing-price">{plan.price}<span>/mes</span></div>
+              <div className="pricing-price">{plan.price}<span>{plan.unit}</span></div>
               <div className="pricing-desc">{plan.desc}</div>
               <ul className="pricing-features">
                 {plan.features.map((feature) => (

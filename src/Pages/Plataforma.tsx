@@ -1,4 +1,4 @@
-﻿export default function Plataforma() {
+export default function Plataforma() {
   return (
     <main className="new-main-content">
       <section className="new-hero-section" style={{ paddingBottom: '3rem', paddingTop: '10rem' }}>
@@ -50,6 +50,34 @@
                 <li>✓ Reportes de rentabilidad</li>
                 <li>✓ Dashboard de auditoría</li>
                 <li>✓ Exportación a Excel y BI Tools</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="glass-panel reveal" style={{ padding: '3rem', display: 'flex', gap: '3rem', alignItems: 'center', textAlign: 'left' }}>
+            <div style={{ flex: 1 }}>
+              <h2 style={{ fontSize: '2.2rem', color: '#fff', marginBottom: '1rem' }}>Logística & Envíos (App Móvil)</h2>
+              <p style={{ color: 'var(--text-dim)', fontSize: '1.1rem', lineHeight: 1.7, marginBottom: '1.5rem' }}>
+                Optimiza tu última milla. Los repartidores cuentan con su propia App para hojas de ruta digitales, mientras que tú monitoreas los pedidos en tiempo real desde el panel central.
+              </p>
+              <ul style={{ color: 'var(--text-main)', listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+                <li>✓ Seguimiento GPS de repartidores</li>
+                <li>✓ Confirmación de entrega digital</li>
+                <li>✓ Gestión de cobros en calle</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="glass-panel reveal" style={{ padding: '3rem', display: 'flex', gap: '3rem', alignItems: 'center', textAlign: 'left' }}>
+            <div style={{ flex: 1 }}>
+              <h2 style={{ fontSize: '2.2rem', color: '#fff', marginBottom: '1rem' }}>Dashboard Gerencial Móvil</h2>
+              <p style={{ color: 'var(--text-dim)', fontSize: '1.1rem', lineHeight: 1.7, marginBottom: '1.5rem' }}>
+                Tu negocio en el bolsillo. App nativa para dueños y gerentes que permite ver arqueos de caja en vivo, ventas del día de todas las sucursales y alertas críticas de stock o mora.
+              </p>
+              <ul style={{ color: 'var(--text-main)', listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+                <li>✓ Arqueos y cierres en tiempo real</li>
+                <li>✓ Notificaciones push de eventos críticos</li>
+                <li>✓ Comparativas de rendimento</li>
               </ul>
             </div>
           </div>
